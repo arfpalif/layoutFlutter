@@ -73,7 +73,6 @@ class _TimerWidgetState extends State<TimerWidget> {
             }, child: Text( 'Pindah ke halaman utama')),
           ],
         ),
-        
       ),
       )
     );
