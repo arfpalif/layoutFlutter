@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:modul3/lifecycle.dart';
 import 'package:modul3/nestedLayout.dart';
+import 'package:modul3/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Nestedlayout(),
+      home: Profile(),
     );
   }
 }

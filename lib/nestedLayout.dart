@@ -24,23 +24,55 @@ class _NestedlayoutState extends State<Nestedlayout> {
     padding: EdgeInsets.all(16),
     child: Column(
       children: [
-        Row(
+        Container(  
+          padding: EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(
+        // Required: A list of two or more Colors to transition between
+              colors: [
+          Colors.blue,
+          Color(0xff1E40AF),
+        ],
+        // Optional: The start point of the gradient (default top left)
+        begin: Alignment.topLeft,
+        // Optional: The end point of the gradient (default bottom right)
+        end: Alignment.bottomRight,
+        // Optional: Stops to control the distribution of colors (0.0 to 1.0)
+        // stops: [0.0, 0.8], 
+      ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 5,
+                offset: Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
+          margin: EdgeInsets.only(bottom: 20),
+          child: Row(
           children: [
-            Image(image: AssetImage('assets/kucing.png'), width: 100, height: 100),
+            CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/kucing.png')
+            ),
             SizedBox(width: 16),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Alif Raihan", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                Text("Alif Raihan", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
                 Text("Teknik Informatika"),
               ],
             ),
           ],
         ),
+        ),
+        
         SizedBox(height: 20),
         Row(
           children: [
-            Expanded(
+            Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
