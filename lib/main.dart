@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:modul3/lifecycle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: TimerWidget(),
     );
   }
 }
@@ -52,10 +53,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        margin: const EdgeInsets.all(32.0),
         child: Padding(padding: const EdgeInsets.all(16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
               onPressed: decrementCounter,
